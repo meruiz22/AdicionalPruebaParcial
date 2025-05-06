@@ -15,20 +15,20 @@ public class ClienteBD {
         String sql = "INSERT INTO Cliente (cedula, nombres, apellidos) VALUES (?, ?, ?)";
         try (Connection conn = ConexionBD.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setInt(1, cliente.getCedula());
-            pstmt.setInt(2, cliente.getNombres());
-            pstmt.setInt(3, cliente.getApellidos());
+            pstmt.setString(1, cliente.getCedula());
+            pstmt.setString(2, cliente.getNombres());
+            pstmt.setString(3, cliente.getApellidos());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    public int obtenerIdPorCedula(int cedula) {
+    public int obtenerIdPorCedula(String cedula) {
         String sql = "SELECT idClie FROM Cliente WHERE cedula = ?";
         try (Connection conn = ConexionBD.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setInt(1, cedula);
+            pstmt.setString(1, cedula);
             ResultSet rs = pstmt.executeQuery();
             if (rs.next()) {
                 return rs.getInt("idClie");

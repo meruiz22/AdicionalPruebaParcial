@@ -57,9 +57,9 @@ public class IngresarCelular extends JFrame {
 
         btnGuardar.addActionListener(e -> {
             try {
-                int cedula = Integer.parseInt(txtCedula.getText());
-                int nombres = Integer.parseInt(txtNombres.getText());
-                int apellidos = Integer.parseInt(txtApellidos.getText());
+                String cedula = txtCedula.getText();
+                String nombres = txtNombres.getText();
+                String apellidos =txtApellidos.getText();
                 String numero = txtNumero.getText();
                 int estado = Integer.parseInt(txtEstado.getText());
 

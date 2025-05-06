@@ -7,14 +7,14 @@ package clases;
 public class Cliente {
 
     private int idClie;
-    private int cedula;
-    private int nombres;
-    private int apellidos;
+    private String cedula;
+    private String nombres;
+    private String apellidos;
 
     public Cliente() {
     }
 
-    public Cliente(int idClie, int cedula, int nombres, int apellidos) {
+    public Cliente(int idClie, String cedula, String nombres, String apellidos) {
         this.idClie = idClie;
         this.cedula = cedula;
         this.nombres = nombres;
@@ -29,29 +29,28 @@ public class Cliente {
         this.idClie = idClie;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
-    public int getNombres() {
+    public String getNombres() {
         return nombres;
     }
 
-    public void setNombres(int nombres) {
+    public void setNombres(String nombres) {
         this.nombres = nombres;
     }
 
-    public int getApellidos() {
+    public String getApellidos() {
         return apellidos;
     }
 
-    public void setApellidos(int apellidos) {
+    public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
-    
-    
+
 }

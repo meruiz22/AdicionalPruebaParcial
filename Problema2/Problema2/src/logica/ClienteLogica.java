@@ -18,7 +18,7 @@ public class ClienteLogica {
         clienteBD.agregarCliente(cliente);
     }
 
-    public int obtenerIdPorCedula(int cedula) {
+    public int obtenerIdPorCedula(String cedula) {
         return clienteBD.obtenerIdPorCedula(cedula);
     }
 }
